@@ -2,10 +2,10 @@
 Experimentation with pix2pix running on spell<br/>
 
 <b>Upload training data on spell ressources</b><br/>
-spell upload data<br/>
+spell upload sticks<br/>
 <br/>
 <b>Training pix2pix with the data</b><br/>
-spell run --machine-type V100 --framework tensorflow "python pix2pix.py --mode train --input_dir data/train --output_dir ckpt --which_direction BtoA --max_epochs 200" -m uploads/data
+spell run --machine-type V100 --framework tensorflow "python pix2pix.py --mode train --input_dir sticks --output_dir ckpt --which_direction AtoB --max_epochs 200" -m uploads/sticks
 <br/>
 <br/>
 <b>Download the model</b><br/>
