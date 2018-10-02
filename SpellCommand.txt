@@ -1,0 +1,15 @@
+spell run --mount runs/THE_RUN_NUMBER_OF_YOUR_SETUP_RUN/data:datasets \
+            --machine-type V100 \
+            --framework tensorflow \
+            --apt ffmpeg \
+            --pip moviepy \
+  "python style.py \
+  --checkpoint-dir ckpt \
+  --style images/style/YOUR_STYLE_IMAGE_NAME.jpg \
+  --style-weight 1.5e2 \
+  --train-path datasets/train2014 \
+  --vgg-path datasets/imagenet-vgg-verydeep-19.mat"
+
+
+
+
